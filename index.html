@@ -35,12 +35,7 @@
 
   <script>
     document.getElementById('myButton').addEventListener('click', function() {
-      if(window.parent && typeof window.parent.sayHelloFromIFrame==='function'){
-        wondow.parent.sayHelloFromIFrame();
-      }else{
-        alert("can not find parent function");
-      }
-      
+      window.parent.postMessage('message','https://amoledewar.github.io/sample-index-file/');
     });
   </script>
 
